@@ -1,0 +1,317 @@
+[{
+    "title": "매일 만나는 Git 명령어 20가지",
+    "tip": "git help everyday"  
+}, {
+    "title": "유용한 Git 가이드 목록 보기 ",
+    "tip": "git help -g"
+}, {
+    "title": "원격리파지토리 내용으로 덮어쓰기",
+    "tip": "git fetch --all && git reset --hard origin/master"
+}, {
+    "title": "특정 커밋까지의 모든 파일 목록 보기",
+    "tip": "git ls-tree --name-only -r <commit-ish>"
+}, {
+    "title": "최초 커밋으로 초기화하기 ",
+    "tip": "git update-ref -d HEAD"
+}, {
+    "title": "충돌난 파일 목록 모두 보기 ",
+    "tip": "git diff --name-only --diff-filter=U"
+}, {
+    "title": "특정 커밋에서 변경된 파일 목록 보기 ",
+    "tip": "git diff-tree --no-commit-id --name-only -r <commit-ish>"
+}, {
+    "title": "스테이지 되지 않은 최종 커밋 이후에 변경된 내용 보기",
+    "tip": "git diff"
+}, {
+    "title": "스테이지된 변경사항 확인하기",
+    "tip": "git diff --cached"
+}, {
+    "title": "모든 변경사항 확인하기 ",
+    "tip": "git diff HEAD"
+}, {
+    "title": "마스터에 이미 머지된 모든 브랜치 목록 모두 보기 ",
+    "tip": "git checkout master && git branch --merged"
+}, {
+    "title": "이전에 브랜치로 빠르게 이동하기 ",
+    "tip": "git checkout -"
+}, {
+    "title": "마스터에 머지된 브랜치 삭제하기 ",
+    "tip": "git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+}, {
+    "title": "원격리파지토리와 최종 커밋을 같이 표시하면서 모든 브랜치 목록보기",
+    "tip": "git branch -vv"
+}, {
+    "title": "원격리파지토리의 브랜치 변경사항 확인하기",
+    "tip": "git branch -u origin/mybranch"
+}, {
+    "title": "로컬리파지토리의 브랜치 삭제하기 ",
+    "tip": "git branch -d <local_branchname>"
+}, {
+    "title": "원격리파지토리의 브랜치 삭제하기 ",
+    "tip": "git push origin --delete <remote_branchname>",
+    "alternatives": ["git push origin :<remote_branchname>"]
+}, {
+    "title": "최종 커밋이후의 로컬리파지토리 파일의 변경된 내용 되돌리기 ",
+    "tip": "git checkout -- <file_name>"
+}, {
+    "title": "되돌리기(Revert): 되돌리는 새로운 커밋을 만듬",
+    "tip": "git revert <commit-ish>"
+}, {
+    "title": "되돌리기(Reset): 커밋들을 취소, 혼자만 사용하는 브랜치에서만 할 것을 추천함",
+    "tip": "git reset <commit-ish>"
+}, {
+    "title": "이전 커밋메시지 수정하기 ",
+    "tip": "git commit -v --amend"
+}, {
+    "title": "작성자 수정하기.",
+    "tip": "git commit --amend --author='Author Name <email@address.com>'"
+}, {
+    "title": "전역에 작성자를 설정한 이후, 커밋의 작성자 변경하기 ",
+    "tip": "git commit --amend --reset-author --no-edit"
+}, {
+    "title": "원격리파지토리 주소(URL) 변경하기 ",
+    "tip": "git remote set-url origin <URL>"
+}, {
+    "title": "원격 리파지토리 모든 목록 보기",
+    "tip": "git remote",
+    "alternatives": ["git remote show"]
+}, {
+    "title": "로컬리파지토리와 원격리파지토리의 모든 브랜치 확인하기 ",
+    "tip": "git branch -a"
+}, {
+    "title": "원격리파지토리의 모든 브랜치 보기 ",
+    "tip": "git branch -r"
+}, {
+    "title": "전체 파일 대신에 변경된 파일만 스테이지하기 ",
+    "tip": "git add -p"
+}, {
+    "title": "Bash에서 자동완성 설정하기",
+    "tip": "curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash && echo '[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash' >> ~/.bashrc"
+}, {
+    "title": "최근 2주간 변경사항 확인하기 ",
+    "tip": "git whatchanged --since='2 weeks ago'"
+}, {
+    "title": "마스터에서 분기된 이후의 모든 변경사항 확인하기 ",
+    "tip": "git log --no-merges --stat --reverse master.."
+}, {
+    "title": "체리픽명령(cherry-pick)으로 다른 브랜치의 커밋 가져오기 ",
+    "tip": "git checkout <branch-name> && git cherry-pick <commit-ish>"
+}, {
+    "title": "특정 커밋을 포함하는 브랜치 찾기 ",
+    "tip": "git branch -a --contains <commit-ish>",
+    "alternatives": ["git branch --contains <commit-ish>"]
+}, {
+    "title": "Git 명령에 별칭 주기 ",
+    "tip": "git config --global alias.<handle> <command> \ngit config --global alias.st status"
+}, {
+    "title": "형상관리 되는 파일의 변경사항을 커밋하지 않고 저장하기 ",
+    "tip": "git stash",
+    "alternatives": ["git stash save"]
+}, {
+    "title": "모든 파일의 변경사항을 커밋하지 않고 저장하기 ",
+    "tip": "git stash save -u",
+    "alternatives": ["git stash save --include-untracked"]
+}, {
+    "title": "저장된 목록 모두 보기 ",
+    "tip": "git stash list"
+}, {
+    "title": "저장된 목록에서 목록을 삭제하지 않고 변경사항 적용하기",
+    "tip": "git stash apply <stash@{n}>"
+}, {
+    "title": "저장된 목록에서 마지막으로 기록된 내용을 지우고 그때의 변경사항을 적용하기 ",
+    "tip": "git stash pop",
+    "alternatives": ["git stash apply stash@{0} && git stash drop stash@{0}"]
+}, {
+    "title": "저장된 내용 모두 지우기 ",
+    "tip": "git stash clear",
+    "alternatives": ["git stash drop <stash@{n}>"]
+}, {
+    "title": "저장된 내용으로 부터 파일 하나만 꺼내기 ",
+    "tip": "git checkout <stash@{n}> -- <file_path>",
+    "alternatives": ["git checkout stash@{0} -- <file_path>"]
+}, {
+    "title": "형상관리 되는 파일 모두 보기 ",
+    "tip": "git ls-files -t"
+}, {
+    "title": "형상관리 되지 않는 파일 모두 보기 ",
+    "tip": "git ls-files --others"
+}, {
+    "title": "제외 목록에 있는 파일 모두 보기 ",
+    "tip": "git ls-files --others -i --exclude-standard"
+}, {
+    "title": "리파지토리에서 새로운 작업트리 생성하기 (git 2.5)",
+    "tip": "git worktree add -b <branch-name> <path> <start-point>"
+}, {
+    "title": "최종상태의 새로운 작업트리 생성하기 ",
+    "tip": "git worktree add --detach <path> HEAD"
+}, {
+    "title": "삭제하지 않고 형상관리 대상에서 제외하기 ",
+    "tip": "git rm --cached <file_path>",
+    "alternatives": ["git rm --cached -r <directory_path>"]
+}, {
+    "title": "형상괸리 되지 않는 파일을 삭제하기 전에, 모의로 수행해보기 ",
+    "tip": "git clean -n"
+}, {
+    "title": "형상관리 되지 않는 파일을 강제로 삭제하기 ",
+    "tip": "git clean -f"
+}, {
+    "title": "형상관리 되지 않는 디렉토리를 강제로 삭제하기 ",
+    "tip": "git clean -f -d",
+    "alternatives": ["git clean -df"]
+}, {
+    "title": "모든 서브모듈을 업데이트 하기 ",
+    "tip": "git submodule foreach git pull"
+}, {
+    "title": "현재 브랜치에서 마스터로 머지되지 않은 목록 모두 보기 ",
+    "tip": "git cherry -v master",
+    "alternatives": ["git cherry -v master <branch-to-be-merged>"]
+}, {
+    "title": "브랜치 이름 변경하기 ",
+    "tip": "git branch -m <new-branch-name>",
+    "alternatives": ["git branch -m [<old-branch-name>] <new-branch-name>"]
+}, {
+    "title": "마스터의 변경사항을 반영하고, 마스터에 머지하기 ",
+    "tip": "git checkout feature && git rebase @{-1} && git checkout @{-2} && git merge @{-1}"
+}, {
+    "title": "마스터 브랜치를 압축하기 ",
+    "tip": "git archive master --format=zip --output=master.zip"
+}, {
+    "title": "커밋 메시지는 수정하지 않고 이전 커밋을 수정하기 ",
+    "tip": "git add --all && git commit --amend --no-edit"
+}, {
+    "title": "현재 접근할 수 없는 오브젝트들을 삭제하기 .",
+    "tip": "git fetch -p",
+    "alternatives": ["git remote prune origin"]
+}, {
+    "title": "최초의 커밋 이력을 조회하기 ",
+    "tip": " git rev-list --reverse HEAD | head -1"
+}, {
+    "title": "Git 로그를 시각화하기",
+    "tip": "git log --pretty=oneline --graph --decorate --all",
+    "alternatives": ["gitk --all"]
+}, {
+    "title": "형상관리 되고 있는 하위폴더를 gh-pages로 배포하기 ",
+    "tip": "git subtree push --prefix subfolder_name origin gh-pages",
+    "alternatives": "git subtree push --prefix subfolder_name origin branch_name"
+}, {
+    "title": "하위 폴더를 사용하는 프로젝트 리파지토리 추가하기 ",
+    "tip": "git subtree add --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master"
+}, {
+    "title": "하위 폴더를 사용하여 연결된 프로젝트를 위해 리파지토리의 최근 변경사항 확인하기 ",
+    "tip": "git subtree pull --prefix=<directory_name>/<project_name> --squash git@github.com:<username>/<project_name>.git master"
+}, {
+    "title": "파일의 변경 이력을 포함하여 번들 내보내기 ",
+    "tip": "git bundle create <file> <branch-name>"
+}, {
+    "title": "번들 읽어오기 ",
+    "tip": "git clone repo.bundle <repo-dir> -b <branch-name>"
+}, {
+    "title": "현재 브랜치의 이름 확인하기 ",
+    "tip": "git rev-parse --abbrev-ref HEAD"
+}, {
+    "title": "커밋에서 파일 하나 제외하기 (예. Changelog).",
+    "tip": "git update-index --assume-unchanged Changelog; git commit -a; git update-index --no-assume-unchanged Changelog"
+}, {
+    "title": "리베이스 하기 전에 저장하기 ",
+    "tip": "git rebase --autostash"
+}, {
+    "title": "원격리파지토리의 변경사항을 로컬브랜치로 이동합니다. ",
+    "tip": "git fetch origin pull/<id>/head:<branch-name>",
+    "alternatives": ["git pull origin pull/<id>/head:<branch-name>"]
+}, {
+    "title": "현재브랜치에서 가장 최근에 태깅뇐 내용 보여주기 ",
+    "tip": "git describe --tags --abbrev=0"
+}, {
+    "title": "변경사항 확인하기 .",
+    "tip": "git diff --word-diff"
+}, {
+    "title": "형상관리 되는 파일의 변경사항을 변경되지 않은 것으로 표시하기 ",
+    "tip": "git update-index --assume-unchanged <file_name>"
+}, {
+    "title": "변경되지 않았다고 표시된 내용을 되돌리기.",
+    "tip": "git update-index --no-assume-unchanged <file_name>"
+}, {
+    "title": "제외된 목록으로부터 필요없는 파일 삭제하기 ",
+    "tip": "git clean -X -f"
+}, {
+    "title": "삭제된 파일 복구하기 ",
+    "tip": "git checkout <deleting_commit>^ -- <file_path>"
+}, {
+    "title": "파일을 특정 커밋으로 되돌리기 ",
+    "tip": "git checkout <commit-ish> -- <file_path>"
+}, {
+    "title": "원격리파지토리의 내용을 받아올때 머지 대신에 리베이스하기 ",
+    "tip": "git config --global branch.autosetuprebase always"
+}, {
+    "title": "Git 설정 모두 보기 ",
+    "tip": "git config --list"
+}, {
+    "title": "대소문자 구별하도록 설정하기 ",
+    "tip": "git config --global core.ignorecase false"
+}, {
+    "title": "오탈자 자동 수정하기 ",
+    "tip": "git config --global help.autocorrect 1"
+}, {
+    "title": "특정 릴리즈의 변경사항이었는지 확인하기 ",
+    "tip": "git name-rev --name-only <SHA-1>"
+}, {
+    "title": "모의 수행. ( 모든 명령어가 dry-run 옵션을 지원함. ))",
+    "tip": "git clean -fd --dry-run"
+}, {
+    "title": "이전 커밋을 수정했다고 혀냊 커밋에 표시하기 ",
+    "tip": "git commit --fixup <SHA-1>"
+}, {
+    "title": "커밋과 수정된 커밋을 하나로 합치기 ",
+    "tip": "git rebase -i --autosquash"
+}, {
+    "title": "커밋하는 동안 스테이지에 넣는 행동 생략하기 ",
+    "tip": "git commit -am <commit message>"
+}, {
+    "title": "제외된 파일 목록 보기 ",
+    "tip": "git check-ignore *"
+}, {
+    "title": "제외된 파일들의 현재상태 확인하기 .",
+    "tip": "git status --ignored"
+}, {
+    "title": "브랜치1의 커밋을 브랜치2에 커밋하기 ",
+    "tip": "git log Branch1 ^Branch2"
+}, {
+    "title": "현재의 이전의 충돌 해법을 기록하고ㅓ 재사용하도록 설정하기 ",
+    "tip":"git config --global rerere.enabled 1"
+}, {
+    "title": "충돌이 발생한 모든 파일을 에디터에서 열기 ",
+    "tip": "git diff --name-only | uniq | xargs $EDITOR"
+}, {
+    "title": "디스크를 소비하고있는 압축되지 않은 오브젝트의 갯수 세기 ",
+    "tip": "git count-objects --human-readable"
+}, {
+   "title": "오브젝트 데이터페이스에서 접근할 수 없는 모든 오브젝트 제외힉 .",
+   "tip": "git gc --prune=now --aggressive"
+},{
+   "title": "작업중인 리파지토리를 바로 웹에서 확인하기 ",
+   "tip": "git instaweb [--local] [--httpd=<httpd>] [--port=<port>] [--browser=<browser>]"
+},{
+   "title": "커밋 로그에서 GPG 서명 확인하기 ",
+   "tip": "git log --show-signature"
+}, {
+    "title": "전역 설정 삭제하기 ",
+    "tip": "git config --global --unset <entry-name>"
+},{
+    "title": "파일 내용만 담고 이력을 가지지 않는 새로운 브랜치 생성하기 ",
+    "tip": "git checkout --orphan <branch_name>"
+},{
+    "title": "최종 커밋과 스테이지된 파일의 변경사항 확인하기 ",
+    "tip": "git diff --staged"
+},{
+    "title": "다른 브랜치의 파일 내용 확인하기 .",
+    "tip": "git show <banch_name>:<file_name>"
+}, {
+	"title": "루트와 머지된 커밋 목록만 확인하기",
+  "tip": "git log --first-parent"
+}, {
+	"title": "이전의 두 커밋을 하나로 합치기 ",
+  "tip": "git rebase --interactive HEAD~2"
+}, {
+  "title": "현재 작업중인 브랜치 목록 보기 ",
+  "tip": "git checkout master && git branch --no-merged"
+}]
