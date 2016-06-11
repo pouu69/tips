@@ -8,8 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "npm run generate && git add README.md",
     "update-readme": "echo 'Updating the readme…'; doxie --render < ./tips.json --inject into README.md && echo '…done!'",
+    "update-readme-korean": "echo 'Updating the readme…'; doxie --render < ./tips-korean.json --inject into README-korean.md && echo '…done!'",
     "update-toc": "echo 'Updating the table of contents…'; doxie --render .doxie.render.toc.js < ./tips.json --append '\n' --inject into README.md as toc && echo '…done!'",
-    "generate": "npm run update-readme; npm run update-toc"
+    "generate": "npm run update-readme; npm run update-toc",
+    "generate-korean": "npm run update-readme-korean; npm run update-toc"
   },
   "repository": {
     "type": "git",
