@@ -601,7 +601,7 @@ git name-rev --name-only <SHA-1>
 git clean -fd --dry-run
 ```
 
-## 이전 커밋을 수정했다고 혀냊 커밋에 표시하기 
+## 이전 커밋을 수정했다고 현재 커밋에 표시하기 
 ```sh
 git commit --fixup <SHA-1>
 ```
@@ -631,7 +631,7 @@ git status --ignored
 git log Branch1 ^Branch2
 ```
 
-## 현재의 이전의 충돌 해법을 기록하고ㅓ 재사용하도록 설정하기 
+## 현재의 이전의 충돌 해법을 기록하고 재사용하도록 설정하기 
 ```sh
 git config --global rerere.enabled 1
 ```
@@ -646,7 +646,7 @@ git diff --name-only | uniq | xargs $EDITOR
 git count-objects --human-readable
 ```
 
-## 오브젝트 데이터페이스에서 접근할 수 없는 모든 오브젝트 제외힉 .
+## 오브젝트 데이터페이스에서 접근할 수 없는 모든 오브젝트 제외하기 .
 ```sh
 git gc --prune=now --aggressive
 ```

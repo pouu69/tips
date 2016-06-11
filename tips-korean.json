@@ -258,7 +258,7 @@
     "title": "모의 수행. ( 모든 명령어가 dry-run 옵션을 지원함. ))",
     "tip": "git clean -fd --dry-run"
 }, {
-    "title": "이전 커밋을 수정했다고 혀냊 커밋에 표시하기 ",
+    "title": "이전 커밋을 수정했다고 현재 커밋에 표시하기 ",
     "tip": "git commit --fixup <SHA-1>"
 }, {
     "title": "커밋과 수정된 커밋을 하나로 합치기 ",
@@ -276,7 +276,7 @@
     "title": "브랜치1의 커밋을 브랜치2에 커밋하기 ",
     "tip": "git log Branch1 ^Branch2"
 }, {
-    "title": "현재의 이전의 충돌 해법을 기록하고ㅓ 재사용하도록 설정하기 ",
+    "title": "현재의 이전의 충돌 해법을 기록하고 재사용하도록 설정하기 ",
     "tip":"git config --global rerere.enabled 1"
 }, {
     "title": "충돌이 발생한 모든 파일을 에디터에서 열기 ",
@@ -285,7 +285,7 @@
     "title": "디스크를 소비하고있는 압축되지 않은 오브젝트의 갯수 세기 ",
     "tip": "git count-objects --human-readable"
 }, {
-   "title": "오브젝트 데이터페이스에서 접근할 수 없는 모든 오브젝트 제외힉 .",
+   "title": "오브젝트 데이터페이스에서 접근할 수 없는 모든 오브젝트 제외하기 .",
    "tip": "git gc --prune=now --aggressive"
 },{
    "title": "작업중인 리파지토리를 바로 웹에서 확인하기 ",
